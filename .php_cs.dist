@@ -1,0 +1,31 @@
+<?php
+
+$header = <<<'EOF'
+@copyright Copyright (C) Andrew W. Longosz.
+@license For full copyright and license information view LICENSE file distributed with this source code.
+EOF;
+
+return PhpCsFixer\Config::create()
+    ->setRules(
+        [
+            '@Symfony' => true,
+            '@Symfony:risky' => true,
+            'array_syntax' => ['syntax' => 'short'],
+            'cast_spaces' => ['space' => 'none'],
+            'blank_line_after_opening_tag' => false,
+            'declare_strict_types' => true,
+            'single_blank_line_before_namespace' => false,
+            'header_comment' => [
+                'commentType' => 'PHPDoc',
+                'header' => $header,
+                'location' => 'after_open',
+                'separate' => 'top',
+            ],
+        ]
+    )
+    ->setRiskyAllowed(true)
+    ->setFinder(
+        PhpCsFixer\Finder::create()
+            ->in([__DIR__ . '/src'])
+            ->files()->name('*.php')
+    );
