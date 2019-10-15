@@ -1,0 +1,20 @@
+{
+    "name": "awlsolutions/ezplatform-contrib-bundle",
+    "description": "eZ Platform bundle containing unofficial contributions",
+    "type": "ezplatform-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Longosz",
+            "email": "alongosz@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AWLSolutions\\EzPlatformContribBundle\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3"
+    }
+}
